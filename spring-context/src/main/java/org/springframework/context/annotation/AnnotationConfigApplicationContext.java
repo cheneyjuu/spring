@@ -84,6 +84,18 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * {@link Configuration @Configuration} classes
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
+		// 准备DefaultListableBeanFactory、AnnotatedBeanDefinitionReader、ClassPathBeanDefinitionScanner
+		/*
+		AnnotatedBeanDefinitionReader 注册默认的 PostProcessor，比如：
+		1. ConfigurationClassPostProcessor
+		2. AutowiredAnnotationBeanPostProcessor
+		3. CommonAnnotationBeanPostProcessor
+		4. EventListenerMethodProcessor
+		5. DefaultEventListenerFactory
+		 */
+		/*
+		ClassPathBeanDefinitionScanner
+		 */
 		this();
 		register(componentClasses);
 		refresh();
