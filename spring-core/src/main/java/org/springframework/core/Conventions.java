@@ -26,6 +26,8 @@ import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
 /**
+ * Conventions的意思是惯例、公约，顾名思义，这个类是供spring内部使用的各种命名规范和其他约定
+ *
  * Provides methods to support various naming and other conventions used
  * throughout the framework. Mainly for internal use within the framework.
  *
@@ -64,7 +66,7 @@ public final class Conventions {
 	public static String getVariableName(Object value) {
 		Assert.notNull(value, "Value must not be null");
 		Class<?> valueClass;
-		boolean pluralize = false;
+		boolean pluralize = false; // ['plʊrəlaɪz] 使 ... 成为复数
 
 		if (value.getClass().isArray()) {
 			valueClass = value.getClass().getComponentType();
